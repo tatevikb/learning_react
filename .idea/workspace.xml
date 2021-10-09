@@ -4,24 +4,8 @@
     <option name="SYNC_PROJECT_BEFORE_BUILD" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="abb17c9e-c861-4afd-b488-ac7a8c58cbe5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/my-app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/reactjs/my-app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reactjs/my-app/src/setupTests.js" beforeDir="false" />
+    <list default="true" id="abb17c9e-c861-4afd-b488-ac7a8c58cbe5" name="Default Changelist" comment="First commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +31,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Projects\learning_react" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -59,6 +49,14 @@
       <option name="presentableId" value="Default" />
       <updated>1633813306379</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1633814071586</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633814071586</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,5 +69,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
   </component>
 </project>
