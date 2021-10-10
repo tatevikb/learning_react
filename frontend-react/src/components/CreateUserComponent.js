@@ -47,13 +47,11 @@ class CreateUserComponent extends React.Component {
         //step 5
         if(this.state.mode === "add") {
             UserService.createUser(user).then(res => {
-                console.log('========================', res)
                 ReactDOM.render(<UserComponent/>, document.querySelector("#list-view"))
             });
         }
         else {
             UserService.updateUser(user, this.state.id).then( res => {
-                console.log('========================', res)
                 ReactDOM.render(<UserComponent/>, document.querySelector("#list-view"))
             });
         }
