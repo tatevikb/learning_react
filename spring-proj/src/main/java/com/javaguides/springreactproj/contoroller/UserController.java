@@ -27,6 +27,14 @@ public class UserController {
         return this.userRepository.findAll();
     }
 
+    // get user by id
+    @GetMapping("/users/{id}")
+    public ResponseEntity<User> getUserById(@PathVariable Long id) {
+        User user = userRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
+        return ResponseEntity.ok(user);
+    }
+
     //create user
     @PostMapping("/users")
     public User createUser(@RequestBody User user) {
@@ -36,7 +44,6 @@ public class UserController {
     //update user
     @PutMapping("/users/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
-
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("User not exist with id :" + id));
         user.setFirstName(userDetails.getFirstName());
