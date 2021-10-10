@@ -12,23 +12,38 @@ class UserComponent extends React.Component {
         }
 
         this.addUser = this.addUser.bind(this);
-    }
-    
-    editUser(id) {
-        this.props.history.push('/add-user/1');
+        this.editUser = this.editUser.bind(this);
+        this.deleteUser = this.deleteUser.bind(this);
     }
 
     componentDidMount() {
-        UserService.getUsers().then((response) => {
-            this.setState({users: response.data})
+        UserService.getUsers().then((res) => {
+            this.setState({users: res.data})
+        });
+    }
+ 
+    deleteUser(id) {
+        UserService.deleteUser(id).then( res => {
+            this.setState({users: this.state.users.filter(user => user.id !== id)});
         });
     }
 
+    editUser(id) {
+        //this.props.history.push('/add-user/1');
+        console.log(id)
+        var rootPlace = document.querySelector("#list-view")
+        ReactDOM.render(
+            <CreateUserComponent mode="edit" userId={id}/>,
+            rootPlace
+        )
+    }
+
+
     addUser() {
         //this.props.history.push('/add-user/_add');
-        var rootPlace = document.querySelector("#root")
+        var rootPlace = document.querySelector("#list-view")
         ReactDOM.render(
-            <CreateUserComponent/>,
+            <CreateUserComponent mode="add" userId="-1"/>,
             rootPlace
         )
     }
@@ -65,9 +80,7 @@ class UserComponent extends React.Component {
                                     <td> {user.email}</td>
                                     <td>
                                         <button onClick = { () => this.editUser(user.id)} className = "btn btn-info"> Update </button>
-                                    </td>
-                                    <td>
-                                        <button onClick = { () => this.deleteUser(user.id)} className = "btn btn-danger"> Delete </button>
+                                        <button style={{marginLeft: "10px"}} onClick = { () => this.deleteUser(user.id)} className = "btn btn-danger"> Delete </button>
                                     </td>
                                 </tr>
                             )

@@ -1,14 +1,16 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import UserService from '../services/UserService';
+import UserComponent from "./UserComponent";
 
 class CreateUserComponent extends React.Component {
     constructor(props) {
         super(props)
-
+        console.log(this.props)
         this.state = {
+            mode: this.props.mode,
             // step 2
-            // if id is -1 then requset is for add operation, when id is 1, then request is for update operation
-            //id: this.props.match.params.id,
+            id: this.props.userId,
             firstName: '',
             lastName: '',
             email: '',
@@ -20,23 +22,17 @@ class CreateUserComponent extends React.Component {
         this.saveUser = this.saveUser.bind(this);
     }
 
-    deleteUser(id){
-        UserService.deleteUser(id).then( res => {
-            this.setState({users: this.state.users.filter(user => user.id !== id)});
-        });
-    }
-
     //step 3
     componentDidMount() {
         //step 4
-        if(this.state.id === "_add") {
+        if(this.state.mode === "add") {
             return;
         }
         else {
             UserService.getUserById(this.state.id).then((res) => {
                 let user = res.data;
                 this.setState({firstName: user.firstName, 
-                    lastname: user.lastName, 
+                    lastName: user.lastName, 
                     email: user.email
                 });
             });
@@ -49,14 +45,16 @@ class CreateUserComponent extends React.Component {
         console.log('user => ' + JSON.stringify(user));
 
         //step 5
-        if(this.state.id === "_add") {
+        if(this.state.mode === "add") {
             UserService.createUser(user).then(res => {
-                this.props.history.push('/users');
+                console.log('========================', res)
+                ReactDOM.render(<UserComponent/>, document.querySelector("#list-view"))
             });
         }
         else {
             UserService.updateUser(user, this.state.id).then( res => {
-                this.props.history.push('/users');
+                console.log('========================', res)
+                ReactDOM.render(<UserComponent/>, document.querySelector("#list-view"))
             });
         }
     }
@@ -78,13 +76,14 @@ class CreateUserComponent extends React.Component {
     }
 
     getTitle() {
-        if(this.state.id === "_add") {
+        if(this.state.mode === "add") {
             return <h3 className = "text-center">Add User</h3>
         }
         else {
             return <h3 className = "text-center">Update User</h3>
         }
     }
+
     render() {
         return (
             <div className = "container">
@@ -117,7 +116,6 @@ class CreateUserComponent extends React.Component {
                         </div>
                     </div>
                 </div>
-                <h3> User Form</h3>
             </div>
         )
     }

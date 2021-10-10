@@ -41,9 +41,7 @@ class ItemComponent extends React.Component {
                                     <td> {item.cost}</td>
                                     <td>
                                         <button className="btn btn-primary" onClick = "btn btn-info"> Update </button>
-                                    </td>
-                                    <td>
-                                        <button className="btn btn-primary" onClick = "btn btn-danger"> Delete </button>
+                                        <button className="btn btn-primary" style={{marginLeft: "10px"}} onClick = "btn btn-danger"> Delete </button>
                                     </td>
                                 </tr>
                             )

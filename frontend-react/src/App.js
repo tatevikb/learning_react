@@ -17,13 +17,8 @@ function App() {
            <div className = "container">
              <Switch> 
                <Route path="/" exact component={HomeComponent}></Route>
-               <Route path="/users" component={UserComponent}></Route>
-             // step 1
-              <Route path="/add-user/:id" component={CreateUserComponent}></Route>
-               <Route path="/items" component={ItemComponent}></Route>
-               <Route path="/categories" component={CategoryComponent}></Route>
-              </Switch>
-             </div>
+             </Switch>
+           </div>
              <FooterComponent />
         </Router>
     </div>
