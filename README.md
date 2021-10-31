@@ -13,7 +13,7 @@ We can add/update/delete users/items/categories.
 * _NodeJS and NPM_
 * _VS code IDE_
 * _Create React API CLI_
-* _Bootstrap 5.0 and Axios HTTP Library_
+* _Bootstrap 5.1.1 and Axios HTTP Library_
 
 ## Service side tools and technologies used
 

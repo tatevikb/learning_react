@@ -79,8 +79,8 @@ class UserComponent extends React.Component {
                                     <td> {user.lastName}</td>
                                     <td> {user.email}</td>
                                     <td>
-                                        <button onClick = { () => this.editUser(user.id)} className = "btn btn-info"> Update </button>
-                                        <button style={{marginLeft: "10px"}} onClick = { () => this.deleteUser(user.id)} className = "btn btn-danger"> Delete </button>
+                                        <button onClick={ () => this.editUser(user.id)} className="btn btn-info">Update</button>
+                                        <button style={{marginLeft: "10px"}} onClick={ () => this.deleteUser(user.id)} className="btn btn-danger">Delete</button>
                                     </td>
                                 </tr>
                             )
